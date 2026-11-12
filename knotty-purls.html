@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff8f5">
+<meta name="description" content="Discover adorable handmade crochet gifts, flowers, bags, plushies and personalised creations at Knotty Purls.">
+<title>Knotty Purls | Handmade With Love</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#e99bb0;--pink-dark:#d77e9b;--pink-light:#fff0f3;--cream:#fffaf5;--lavender:#eee9fa;--brown:#55443f;--muted:#998781;--shadow:0 12px 35px rgba(104,65,65,.09)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--brown);overflow-x:hidden}
+button,input{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
+.container{width:min(1160px,91%);margin:auto}
+.announcement{text-align:center;background:#f7dce3;padding:9px;font-size:12px;letter-spacing:1px;color:#825365}
+header{position:sticky;top:0;z-index:50;background:rgba(255,250,245,.95);backdrop-filter:blur(14px);border-bottom:1px solid #f3e8e3}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:'Playfair Display',serif;font-size:27px;color:#a85f79;font-weight:700;white-space:nowrap}
+.logo span{color:#d99aaf}.navlinks{display:flex;align-items:center;gap:30px;font-size:13px;font-weight:600}
+.navlinks a:hover{color:var(--pink-dark)}.nav-actions{display:flex;align-items:center;gap:12px}
+.icon-btn{width:40px;height:40px;border:1px solid #f1e3df;border-radius:50%;background:white;color:var(--brown);font-size:17px;display:grid;place-items:center}
+.menu-btn{display:none}.hero{padding:55px 0 65px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:45px}
+.eyebrow{font-size:11px;letter-spacing:2.5px;color:var(--pink-dark);font-weight:800;text-transform:uppercase;margin-bottom:17px}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600}
+.hero h1{font-size:clamp(42px,5.4vw,68px);line-height:1.12;max-width:570px}
+.hero h1 em{font-style:normal;color:#d77e9b}
+.hero p{color:#887873;font-size:15px;line-height:1.9;margin:22px 0 28px;max-width:460px}
+.btn{border:0;border-radius:40px;padding:14px 24px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.btn-primary{background:#d985a0;color:white}.btn-light{background:white;border:1px solid #f0dce2;color:#9c6377}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.hero-art{position:relative;min-height:430px;border-radius:48% 48% 35% 35%;background:linear-gradient(145deg,#f7dce4,#eee7fa 65%,#f8e7d9);display:grid;place-items:center;overflow:hidden}
+.hero-art:before,.hero-art:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.55)}
+.hero-art:before{width:330px;height:330px}.hero-art:after{width:390px;height:390px}
+.hero-art .big-flower{font-size:175px;filter:drop-shadow(0 15px 12px #a56c7530);z-index:2;animation:float 4s ease-in-out infinite}
+.floating{position:absolute;background:#fffaf5;padding:12px 17px;border-radius:18px;box-shadow:var(--shadow);font-size:12px;font-weight:700;z-index:3}
+.f1{top:18%;left:5%}.f2{bottom:18%;right:4%}
+@keyframes float{50%{transform:translateY(-12px) rotate(5deg)}}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;padding:20px 0 55px}
+.trust-item{display:flex;align-items:center;justify-content:center;gap:12px;padding:16px 8px;border-right:1px solid #eee1dc}
+.trust-item:last-child{border:0}.trust-item span:first-child{font-size:25px}
+.trust-item strong{display:block;font-size:12px}.trust-item small{font-size:10px;color:var(--muted)}
+.section{padding:65px 0}.section-head{text-align:center;margin-bottom:34px}
+.section-head .eyebrow{margin-bottom:10px}.section-head h2{font-size:clamp(30px,4vw,43px)}
+.section-head p{font-size:13px;color:var(--muted);margin-top:10px}
+.categories{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.cat-btn{padding:10px 19px;border-radius:30px;border:1px solid #eddfda;background:white;color:#887873;font-size:12px;font-weight:600}
+.cat-btn.active,.cat-btn:hover{background:#d985a0;color:white;border-color:#d985a0}
+.shop-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}
+.shop-tools p{font-size:12px;color:var(--muted)}
+.search{border:1px solid #eee0dc;border-radius:30px;padding:11px 17px;background:white;outline:none;width:min(250px,55%);font-size:12px}
+.search:focus{border-color:var(--pink)}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.product-card{background:white;border:1px solid #f1e8e3;border-radius:19px;overflow:hidden;transition:.3s;position:relative}
+.product-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.product-art{height:225px;display:grid;place-items:center;position:relative;overflow:hidden}
+.product-art .emoji{font-size:90px;filter:drop-shadow(0 9px 7px #00000014);transition:.3s}
+.product-card:hover .emoji{transform:scale(1.12) rotate(-4deg)}
+.art-pink{background:linear-gradient(145deg,#fbe0e6,#fff0e9)}.art-lavender{background:linear-gradient(145deg,#e9e3fa,#f9edfa)}
+.art-green{background:linear-gradient(145deg,#e0efdf,#f6f5e5)}.art-yellow{background:linear-gradient(145deg,#fff0cf,#fff6e9)}
+.art-blue{background:linear-gradient(145deg,#dfedfa,#f4eafa)}.art-peach{background:linear-gradient(145deg,#ffe3d8,#fff1e7)}
+.tag{position:absolute;top:13px;left:13px;background:#fff;border-radius:20px;padding:6px 10px;font-size:9px;font-weight:800;color:#a86a7c;letter-spacing:.5px}
+.heart{position:absolute;top:10px;right:11px;border:0;background:#fff;width:31px;height:31px;border-radius:50%;font-size:16px;color:#c48a9a}
+.product-info{padding:16px}.product-info small{font-size:10px;color:#bd8a9b;text-transform:uppercase;letter-spacing:1px}
+.product-info h3{font-size:18px;margin:7px 0}.product-info p{font-size:11px;color:var(--muted);line-height:1.6;min-height:34px}
+.product-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:15px}
+.price{font-weight:800;font-size:15px}.view-btn{background:var(--pink-light);color:#ad6c81;border:0;padding:9px 13px;border-radius:25px;font-size:11px;font-weight:700}
+.no-results{grid-column:1/-1;text-align:center;padding:50px;color:var(--muted)}
+.banner{background:#f4eaf8;border-radius:28px;padding:42px;display:grid;grid-template-columns:1.3fr .7fr;align-items:center;overflow:hidden}
+.banner h2{font-size:35px;line-height:1.25}.banner p{font-size:13px;color:#88758e;line-height:1.8;margin:14px 0 22px;max-width:480px}
+.banner-art{text-align:center;font-size:115px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:55px}
+.about-art{min-height:340px;border-radius:25px;background:linear-gradient(145deg,#f7dfe7,#eee8fa);display:grid;place-items:center;font-size:130px;position:relative}
+.about-copy h2{font-size:38px;line-height:1.2}.about-copy p{font-size:13px;color:var(--muted);line-height:2;margin-top:17px}
+.values{display:flex;gap:20px;margin-top:24px;flex-wrap:wrap}.values span{font-size:12px;font-weight:700;color:#a66e81}
+.insta{background:#fff3f2;padding:65px 0}.insta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
+.insta-item{aspect-ratio:1;border-radius:17px;display:grid;place-items:center;font-size:65px;transition:.3s}
+.insta-item:hover{transform:scale(1.03)}.i1{background:#f6dce4}.i2{background:#e9e3f7}.i3{background:#e2eddd}.i4{background:#f8e9d5}
+.insta-follow{text-align:center;margin-top:25px;font-size:13px;color:#a56d82}
+.contact{background:#fff;padding:60px 0}.contact-box{background:linear-gradient(120deg,#fce7ec,#f1eafb);border-radius:25px;padding:45px 25px;text-align:center}
+.contact-box h2{font-size:36px}.contact-box p{color:#927f82;font-size:13px;margin:13px auto 22px;line-height:1.8}
+.contact-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+footer{background:#5b4847;color:#fff4f0;padding:42px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px}
+footer .logo{color:#f4b6c9}footer p{font-size:12px;line-height:1.8;color:#d7c6c1;margin-top:12px;max-width:300px}
+footer h4{font-size:13px;margin-bottom:14px}.footer-links{display:grid;gap:10px;font-size:12px;color:#e1d3ce}
+.footer-links a:hover{color:#f7b9cc}.copyright{text-align:center;border-top:1px solid #766260;margin-top:30px;padding-top:18px;font-size:10px;color:#c9b8b2}
+.whatsapp-float{position:fixed;right:20px;bottom:20px;width:54px;height:54px;background:#25d366;color:white;border-radius:50%;display:grid;place-items:center;font-size:26px;z-index:40;box-shadow:0 6px 20px #0002;border:3px solid white}
+.overlay{display:none;position:fixed;inset:0;background:#32221f80;z-index:100;align-items:center;justify-content:center;padding:15px}
+.overlay.show{display:flex}.modal{background:white;border-radius:23px;width:min(720px,100%);max-height:90vh;overflow:auto;position:relative}
+.modal-close{position:absolute;right:15px;top:15px;width:35px;height:35px;border:0;border-radius:50%;background:white;font-size:20px;z-index:2}
+.modal-content{display:grid;grid-template-columns:1fr 1fr}.modal-art{min-height:330px;display:grid;place-items:center;font-size:125px}
+.modal-info{padding:45px 28px 30px}.modal-info h2{font-size:28px;margin:9px 0}
+.modal-info p{font-size:12px;color:var(--muted);line-height:1.8;margin:15px 0}.modal-price{font-size:23px;font-weight:800;margin:20px 0}
+.modal-info .btn{width:100%}.qty{display:flex;align-items:center;gap:13px;margin:15px 0;font-size:13px}
+.qty button{width:29px;height:29px;border:1px solid #eee;border-radius:50%;background:white}
+.toast{position:fixed;bottom:85px;left:50%;transform:translateX(-50%);background:#51413e;color:white;padding:12px 20px;border-radius:30px;font-size:12px;display:none;z-index:200}
+.toast.show{display:block}
+@media(max-width:900px){.product-grid{grid-template-columns:repeat(3,1fr)}.navlinks{gap:17px}.hero-grid{gap:25px}}
+@media(max-width:650px){
+.nav{height:65px}.logo{font-size:23px}.menu-btn{display:grid}
+.navlinks{display:none;position:absolute;top:65px;left:0;right:0;background:var(--cream);padding:20px;flex-direction:column;align-items:stretch;gap:18px;border-bottom:1px solid #eee}
+.navlinks.open{display:flex}.hero{padding:35px 0}.hero-grid{grid-template-columns:1fr;gap:30px}
+.hero h1{font-size:46px}.hero-art{min-height:300px}.hero-art .big-flower{font-size:130px}
+.trust{grid-template-columns:repeat(2,1fr);padding-bottom:30px}.trust-item{border:0;justify-content:flex-start}
+.section{padding:45px 0}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.product-art{height:160px}.product-art .emoji{font-size:65px}.product-info{padding:12px}
+.product-info h3{font-size:15px}.product-info p{font-size:10px}.product-bottom{gap:5px}
+.price{font-size:13px}.view-btn{padding:8px;font-size:10px}.banner{grid-template-columns:1fr;padding:30px 23px}
+.banner h2{font-size:30px}.banner-art{font-size:75px}.about-grid{grid-template-columns:1fr;gap:25px}
+.about-art{min-height:240px;font-size:100px}.about-copy h2{font-size:32px}
+.insta-grid{grid-template-columns:repeat(2,1fr)}.insta-item{font-size:55px}
+.contact-box h2{font-size:30px}.footer-grid{grid-template-columns:1fr 1fr}
+.footer-grid>div:first-child{grid-column:1/-1}.modal-content{grid-template-columns:1fr}
+.modal-art{min-height:210px;font-size:95px}.modal-info{padding:20px}.modal-info h2{font-size:24px}
+.shop-tools{align-items:flex-start}
+}
+@media(max-width:360px){.product-grid{grid-template-columns:1fr}.product-art{height:210px}}
+</style>
+</head>
+<body>
+<div class="announcement">♡ HANDMADE WITH LOVE · MADE JUST FOR YOU ♡</div>
+<header><div class="container nav">
+<a href="#" class="logo">Knotty <span>Purls.</span> 🧶</a>
+<nav class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">Our Story</a><a href="#custom">Custom Orders</a><a href="#contact">Contact</a></nav>
+<div class="nav-actions"><a class="icon-btn" href="#shop" aria-label="Shop">⌕</a><button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button></div>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="container hero-grid"><div>
+<div class="eyebrow">A little handmade happiness ♡</div><h1>Little things,<br><em>made with love.</em></h1>
+<p>From adorable crochet flowers to the cutest little companions, every stitch tells a story. Find something special, made slowly and lovingly by hand.</p>
+<div class="hero-buttons"><a class="btn btn-primary" href="#shop">Explore Collection ↗</a><a class="btn btn-light" href="#about">Our Little Story ♡</a></div>
+</div><div class="hero-art"><div class="floating f1">♡ Handmade magic</div><div class="big-flower">💐</div><div class="floating f2">Made with patience ✨</div></div></div></section>
+<div class="container trust">
+<div class="trust-item"><span>🧶</span><div><strong>Handmade</strong><small>Every stitch matters</small></div></div>
+<div class="trust-item"><span>🎀</span><div><strong>Personalised</strong><small>Made your way</small></div></div>
+<div class="trust-item"><span>💌</span><div><strong>Made with love</strong><small>Thoughtful gifting</small></div></div>
+<div class="trust-item"><span>🌷</span><div><strong>One of a kind</strong><small>Little unique treasures</small></div></div>
+</div>
+<section class="section" id="shop"><div class="container">
+<div class="section-head"><div class="eyebrow">The handmade collection</div><h2>Find your little favourite ♡</h2><p>Something cute for you or someone you love.</p></div>
+<div class="categories" id="categories">
+<button class="cat-btn active" data-cat="All">All Products</button><button class="cat-btn" data-cat="Flowers">Flowers</button><button class="cat-btn" data-cat="Accessories">Accessories</button><button class="cat-btn" data-cat="Bags">Bags</button><button class="cat-btn" data-cat="Plushies">Plushies</button><button class="cat-btn" data-cat="Gifts">Gifts</button>
+</div>
+<div class="shop-tools"><p id="productCount">Our lovely collection</p><input class="search" type="search" id="search" placeholder="⌕ Search something cute..."></div>
+<div class="product-grid" id="productGrid"></div>
+</div></section>
+<section class="section"><div class="container"><div class="banner"><div>
+<div class="eyebrow">Something made just for you</div><h2>Dream it.<br>We'll crochet it. 🎀</h2>
+<p>Have a special colour, flower, character or gift in mind? Tell us what you're imagining and let's create something lovely together.</p>
+<a href="#custom" class="btn btn-primary">Request a Custom Order ↗</a>
+</div><div class="banner-art">🧸🌷</div></div></div></section>
+<section class="section" id="about"><div class="container about-grid">
+<div class="about-art">🧶🌸</div><div class="about-copy"><div class="eyebrow">A little about us</div><h2>Not just yarn.<br>A whole lot of love.</h2>
+<p>Welcome to Knotty Purls, a little corner of handmade happiness. We believe that the best things aren't rushed. Each creation is thoughtfully crafted stitch by stitch, bringing warmth, colour and a little joy into everyday life.</p>
+<p>Whether it's a flower that never fades, a cute crochet companion or a thoughtful gift, we want every piece to feel special.</p>
+<div class="values"><span>♡ Thoughtfully made</span><span>♡ Made with care</span><span>♡ Uniquely yours</span></div>
+</div></div></section>
+<section class="insta" id="instagram"><div class="container">
+<div class="section-head"><div class="eyebrow">Follow our little world</div><h2>A little more handmade magic ♡</h2><p>Follow us for new creations, behind-the-scenes and lovely updates.</p></div>
+<div class="insta-grid">
+<a class="insta-item i1" href="https://www.instagram.com/knottypurlsofficial/" target="_blank" rel="noopener">🌷</a>
+<a class="insta-item i2" href="https://www.instagram.com/knottypurlsofficial/" target="_blank" rel="noopener">🧸</a>
+<a class="insta-item i3" href="https://www.instagram.com/knottypurlsofficial/" target="_blank" rel="noopener">🌼</a>
+<a class="insta-item i4" href="https://www.instagram.com/knottypurlsofficial/" target="_blank" rel="noopener">👜</a>
+</div><div class="insta-follow"><a href="https://www.instagram.com/knottypurlsofficial/" target="_blank" rel="noopener">@knottypurlsofficial ↗</a></div>
+</div></section>
+<section class="section" id="custom"><div class="container"><div class="section-head"><div class="eyebrow">Your idea, our yarn</div><h2>Let's make it personal ♡</h2><p>Tell us about the little thing you've been dreaming of.</p></div>
+<div class="contact-box"><h2>Something special in mind?</h2><p>Custom colours, special gifts, bouquets or a completely new idea.<br>Send us your inspiration and we'll discuss the possibilities.</p>
+<div class="contact-actions"><button class="btn btn-primary" onclick="customOrder()">Request on WhatsApp ↗</button><a class="btn btn-light" href="https://www.instagram.com/knottypurlsofficial/" target="_blank" rel="noopener">DM on Instagram ♡</a></div>
+</div></div></section>
+<section class="contact" id="contact"><div class="container"><div class="contact-box">
+<div class="eyebrow">We'd love to hear from you</div><h2>Let's talk handmade! 💌</h2><p>Questions about a product? Need help choosing a gift?<br>We're just a message away.</p>
+<div class="contact-actions"><button class="btn btn-primary" onclick="openWhatsApp('Hi! I would love to know more about Knotty Purls.')">Chat on WhatsApp ↗</button><a class="btn btn-light" href="https://www.instagram.com/knottypurlsofficial/" target="_blank" rel="noopener">Instagram ↗</a></div>
+</div></div></section>
+</main>
+<footer><div class="container"><div class="footer-grid">
+<div><a href="#" class="logo">Knotty Purls. 🧶</a><p>Little handmade treasures, crafted with love and a whole lot of yarn. Thank you for supporting handmade.</p></div>
+<div><h4>Explore</h4><div class="footer-links"><a href="#home">Home</a><a href="#shop">Shop Collection</a><a href="#about">Our Story</a><a href="#custom">Custom Orders</a></div></div>
+<div><h4>Say Hello</h4><div class="footer-links"><a href="https://www.instagram.com/knottypurlsofficial/" target="_blank" rel="noopener">Instagram ↗</a><a href="#" onclick="openWhatsApp('Hi Knotty Purls!');return false">WhatsApp ↗</a><a href="#contact">Contact Us</a></div></div>
+</div><div class="copyright">© <span id="year"></span> Knotty Purls. Made with ♡ and yarn.</div></div></footer>
+<a class="whatsapp-float" href="#" onclick="openWhatsApp('Hi Knotty Purls! I would love to know more.');return false" aria-label="WhatsApp">☏</a>
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeModal()"><div class="modal"><button class="modal-close" onclick="closeModal()">×</button><div class="modal-content" id="modalContent"></div></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+// BUSINESS SETTINGS — add the owner's WhatsApp number here.
+// Use country code + number, without "+" or spaces.
+const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+const INSTAGRAM_URL = "https://www.instagram.com/knottypurlsofficial/";
+
+// SAMPLE CATALOGUE — replace with the real products, prices and photos.
+const products=[
+{id:1,name:"Crochet Flower Bouquet",cat:"Flowers",price:499,emoji:"💐",art:"art-pink",tag:"BESTSELLER",desc:"A beautiful handmade crochet flower bouquet that stays lovely forever. Perfect for birthdays, anniversaries and thoughtful surprises."},
+{id:2,name:"Sunflower Bouquet",cat:"Flowers",price:399,emoji:"🌻",art:"art-yellow",tag:"POPULAR",desc:"Brighten someone's day with a cheerful handmade sunflower bouquet."},
+{id:3,name:"Crochet Rose",cat:"Flowers",price:149,emoji:"🌹",art:"art-pink",tag:"HANDMADE",desc:"A sweet crochet rose, lovingly crafted as a little keepsake."},
+{id:4,name:"Cute Crochet Teddy",cat:"Plushies",price:399,emoji:"🧸",art:"art-peach",tag:"CUTE PICK",desc:"A cuddly handmade crochet teddy, perfect for gifting and decorating."},
+{id:5,name:"Mini Crochet Bunny",cat:"Plushies",price:299,emoji:"🐰",art:"art-lavender",tag:"ADORABLE",desc:"A tiny handmade bunny with lots of personality."},
+{id:6,name:"Crochet Tote Bag",cat:"Bags",price:699,emoji:"👜",art:"art-green",tag:"TRENDING",desc:"A stylish handmade crochet tote bag for your everyday essentials."},
+{id:7,name:"Flower Keychain",cat:"Accessories",price:129,emoji:"🌼",art:"art-yellow",tag:"UNDER ₹200",desc:"A cute little handmade accessory for your keys or bag."},
+{id:8,name:"Crochet Hair Bow",cat:"Accessories",price:99,emoji:"🎀",art:"art-pink",tag:"SWEET PICK",desc:"An adorable handmade crochet bow accessory."},
+{id:9,name:"Mini Crochet Mushroom",cat:"Plushies",price:199,emoji:"🍄",art:"art-peach",tag:"NEW",desc:"A tiny whimsical crochet mushroom to add charm to your space."},
+{id:10,name:"Crochet Gift Set",cat:"Gifts",price:599,emoji:"🎁",art:"art-lavender",tag:"GIFT FAVOURITE",desc:"A thoughtful handmade gift set for someone special."},
+{id:11,name:"Daisy Flower Stem",cat:"Flowers",price:129,emoji:"🌼",art:"art-green",tag:"HANDMADE",desc:"A lovely little daisy stem that brings a smile every time."},
+{id:12,name:"Crochet Heart",cat:"Gifts",price:149,emoji:"💗",art:"art-pink",tag:"MADE WITH LOVE",desc:"A soft handmade crochet heart. A little reminder that someone cares."}
+];
+let selectedCategory="All",activeProduct=null,quantity=1;
+const grid=document.getElementById("productGrid");
+function renderProducts(){
+ const query=document.getElementById("search").value.toLowerCase().trim();
+ const filtered=products.filter(p=>(selectedCategory==="All"||p.cat===selectedCategory)&&(p.name+" "+p.cat+" "+p.desc).toLowerCase().includes(query));
+ document.getElementById("productCount").textContent=`${filtered.length} lovely creation${filtered.length===1?"":"s"} to explore`;
+ if(!filtered.length){grid.innerHTML='<div class="no-results">🌷<br><br>Oops! No matching creations found.<br>Try another search.</div>';return;}
+ grid.innerHTML=filtered.map(p=>`<article class="product-card"><div class="product-art ${p.art}"><span class="tag">${p.tag}</span><span class="emoji">${p.emoji}</span><button class="heart" onclick="showToast('♡ Saved to your favourites!')" aria-label="Favourite">♡</button></div><div class="product-info"><small>${p.cat}</small><h3>${p.name}</h3><p>${p.desc.slice(0,75)}${p.desc.length>75?"...":""}</p><div class="product-bottom"><span class="price">₹${p.price}</span><button class="view-btn" onclick="showProduct(${p.id})">View Details ↗</button></div></div></article>`).join("");
+}
+document.getElementById("categories").addEventListener("click",e=>{const btn=e.target.closest(".cat-btn");if(!btn)return;document.querySelectorAll(".cat-btn").forEach(b=>b.classList.remove("active"));btn.classList.add("active");selectedCategory=btn.dataset.cat;renderProducts();});
+document.getElementById("search").addEventListener("input",renderProducts);
+function showProduct(id){
+ activeProduct=products.find(p=>p.id===id);quantity=1;const p=activeProduct;
+ document.getElementById("modalContent").innerHTML=`<div class="modal-art ${p.art}">${p.emoji}</div><div class="modal-info"><small style="color:#bd8a9b;letter-spacing:1px">${p.cat} · ${p.tag}</small><h2>${p.name}</h2><p>${p.desc}</p><p>♡ Handmade with love<br>♡ Customisation subject to availability<br>♡ Please confirm availability before ordering</p><div class="modal-price">₹${p.price}</div><div class="qty">Quantity: <button onclick="changeQty(-1)">−</button><strong id="qtyValue">1</strong><button onclick="changeQty(1)">+</button></div><button class="btn btn-primary" onclick="orderProduct()">Order on WhatsApp ↗</button></div>`;
+ document.getElementById("overlay").classList.add("show");document.body.style.overflow="hidden";
+}
+function changeQty(amount){quantity=Math.max(1,Math.min(20,quantity+amount));document.getElementById("qtyValue").textContent=quantity;}
+function closeModal(){document.getElementById("overlay").classList.remove("show");document.body.style.overflow="";}
+function orderProduct(){if(!activeProduct)return;const p=activeProduct;openWhatsApp(`Hi Knotty Purls! 💗\n\nI'm interested in ordering:\n\nProduct: ${p.name}\nQuantity: ${quantity}\nListed price: ₹${p.price*quantity}\n\nIs this product available? Please share the details, customisation options and delivery charges.\n\nThank you!`);}
+function openWhatsApp(message){
+ if(!WHATSAPP_NUMBER||WHATSAPP_NUMBER.includes("X")){showToast("Please add the business WhatsApp number in the code first.");return;}
+ window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message),"_blank","noopener");
+}
+function customOrder(){openWhatsApp("Hi Knotty Purls! 🎀\n\nI'd love to request a custom crochet order.\n\nMy idea:\nPreferred colours:\nQuantity:\nRequired date:\n\nCould you please guide me?");}
+function showToast(message){const toast=document.getElementById("toast");toast.textContent=message;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),2600);}
+document.getElementById("menuBtn").addEventListener("click",()=>document.getElementById("navlinks").classList.toggle("open"));
+document.querySelectorAll("#navlinks a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navlinks").classList.remove("open")));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
+document.getElementById("year").textContent=new Date().getFullYear();
+renderProducts();
+</script>
+</body>
+</html>
